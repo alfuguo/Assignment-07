@@ -6,7 +6,7 @@ class CustomArrayListTest {
 
     //Request 1 : add new items
     @Test
-    public void test_add_one_item() {
+    public void test_Add_One_Item() {
         CustomList<Integer> sut = new CustomArrayList<>();
         sut.add(1);
         assertEquals(1, sut.get(0));
@@ -14,7 +14,7 @@ class CustomArrayListTest {
     }
 
     @Test
-    public void test_add_one_hundred_items() {
+    public void test_Add_One_Hundred_Items() {
         CustomList<Integer> sut = new CustomArrayList<>();
         generateOneHundredNumbers(sut);
         assertEquals(99, sut.get(99));
@@ -23,7 +23,7 @@ class CustomArrayListTest {
 
     //Request 2: add new items in the specified index
     @Test
-    public void test_add_new_item_to_specified_index() {
+    public void test_Add_New_Item_To_Specified_Index() {
         CustomList<Integer> sut = new CustomArrayList<>();
         generateOneHundredNumbers(sut);
         sut.add(59, 95);
@@ -31,7 +31,7 @@ class CustomArrayListTest {
         assertEquals(95, sut.get(59));
     }
     @Test
-    public void test_add_new_item_to_first_index(){
+    public void test_Add_New_Item_To_First_Index(){
         CustomList<Integer> sut = new CustomArrayList<>();
         generateOneHundredNumbers(sut);
         sut.add(0,95);
@@ -39,7 +39,7 @@ class CustomArrayListTest {
         assertEquals(95, sut.get(0));
     }
     @Test
-    public void test_add_new_item_to_last_index(){
+    public void test_Add_New_Item_To_Last_Index(){
         CustomList<Integer> sut = new CustomArrayList<>();
         generateOneHundredNumbers(sut);
         sut.add(99,95);
@@ -49,7 +49,7 @@ class CustomArrayListTest {
 
     //Request 3: Throw Exception when index doesn't exist
     @Test
-    public void test_throw_exception_when_index_does_not_exist(){
+    public void test_Throw_Exception_When_Index_Does_Not_Exist(){
         CustomList<Integer> sut = new CustomArrayList<>();
         generateOneHundredNumbers(sut);
         assertThrows(IndexOutOfBoundsException.class, ()-> sut.add(250,250));
@@ -58,7 +58,7 @@ class CustomArrayListTest {
     }
     //Request 4: Remove items
     @Test
-    public void test_remove_one_item_from_middle_of_list(){
+    public void test_Remove_One_Item_From_Middle_Of_List(){
         CustomList<Integer> sut = new CustomArrayList<>();
         generateOneHundredNumbers(sut);
         sut.remove(88);
@@ -67,7 +67,7 @@ class CustomArrayListTest {
         assertNull(sut.get(99));
     }
     @Test
-    public void test_remove_one_item_from_beginning_of_list(){
+    public void test_Remove_One_Item_From_Beginning_Of_List(){
         CustomList<Integer> sut = new CustomArrayList<>();
         generateOneHundredNumbers(sut);
         sut.remove(0);
@@ -76,7 +76,7 @@ class CustomArrayListTest {
         assertNull(sut.get(99));
     }
     @Test
-    public void test_remove_one_item_from_end_of_list(){
+    public void test_Remove_One_Item_From_End_Of_List(){
         CustomList<Integer> sut = new CustomArrayList<>();
         generateOneHundredNumbers(sut);
         sut.remove(99);
@@ -85,7 +85,7 @@ class CustomArrayListTest {
         assertNull(sut.get(99));
     }
     @Test
-    public void test_remove_multiple_items_from_list(){
+    public void test_Remove_Multiple_Items_From_List(){
         CustomList<Integer> sut = new CustomArrayList<>();
         generateOneHundredNumbers(sut);
         sut.remove(0);
@@ -98,7 +98,7 @@ class CustomArrayListTest {
     }
 
     @Test
-    public void test_throw_exception_when_remove__index_does_not_exist() {
+    public void test_Throw_Exception_When_Remove__Index_Does_Not_Exist() {
         CustomList<Integer> sut = new CustomArrayList<>();
         generateOneHundredNumbers(sut);
 
