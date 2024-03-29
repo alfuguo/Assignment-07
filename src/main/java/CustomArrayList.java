@@ -5,14 +5,15 @@ public class CustomArrayList<T> implements CustomList<T> {
 	int size = 0;
 	
 	@Override
-	public boolean add(T item) throws IndexOutOfBoundsException{
+	public boolean add(T item){
 		if (size == items.length) {
 			items = Arrays.copyOf(items, items.length * 2);
 		}
 		items[size] = item;
 		size++;
+		System.out.println("capacity: " + items.length);
 		return true;
-	}
+    }
 
 
 	@Override

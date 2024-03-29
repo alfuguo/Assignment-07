@@ -2,11 +2,11 @@ public class CustomArrayListApplication {
 	public static void main(String[] args) {
 		CustomList<String> myCustomList = new CustomArrayList<>();
 		//10 elements
-		myCustomList.add("one"); myCustomList.add("two"); 
-		myCustomList.add("three"); myCustomList.add("four"); 
-		myCustomList.add("five"); myCustomList.add("six"); 
-		myCustomList.add("seven"); myCustomList.add("eight"); 
-		myCustomList.add("nine"); myCustomList.add("ten"); 
+		myCustomList.add("one"); myCustomList.add("two");
+		myCustomList.add("three"); myCustomList.add("four");
+		myCustomList.add("five"); myCustomList.add("six");
+		myCustomList.add("seven"); myCustomList.add("eight");
+		myCustomList.add("nine"); myCustomList.add("ten");
 		//20 elements
 //		myCustomList.add("eleven"); myCustomList.add("twelve"); 
 //		myCustomList.add("thirteen"); myCustomList.add("fourteen"); 
@@ -33,12 +33,13 @@ public class CustomArrayListApplication {
 //		myCustomList.add("check"); myCustomList.add("double check");
 		
 		
-		
+
 		for (int i=0; i<myCustomList.getSize(); i++) {
 		    System.out.println(myCustomList.get(i));
 		}
 		
 		System.out.println("total elements: " + myCustomList.getSize());
+
 	
 		
 		
