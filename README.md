@@ -48,6 +48,9 @@ You will need to add to the functionality of your CustomArrayList based on this 
 >      * @return the actual item that was removed from the list
 > 
 >      * @throws IndexOutOfBoundsException
+>
+
+
 ![Screenshot 2024-03-30 110533](https://github.com/alfuguo/Assignment-07/assets/137233519/719cbeba-cb5c-4f37-94ce-4f375b9aa5fa)
 
 
