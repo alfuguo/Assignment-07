@@ -106,7 +106,12 @@ class CustomArrayListTest {
         assertThrows(IndexOutOfBoundsException.class, () -> sut.remove(-2));
     }
 
-
+    @Test
+    public void test_Remove_One_Item_Returns_Removed_Item(){
+        CustomList<Integer> sut = new CustomArrayList<>();
+        generateOneHundredNumbers(sut);
+        assertEquals(88, sut.remove(88));
+    }
     //Method - Generate One Hundred Numbers for test
     private static void generateOneHundredNumbers(CustomList<Integer> sut) {
         for (int i = 0; i < 100; i++) {
