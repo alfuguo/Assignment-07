@@ -1,21 +1,7 @@
 import java.util.Arrays;
-
 public class CustomArrayList<T> implements CustomList<T> {
 	Object[] items = new Object[10];								
 	int size = 0;
-	
-//	@Override
-//	public boolean add(T item){
-//		if (size == items.length) {
-//			items = Arrays.copyOf(items, items.length * 2);
-//		}
-//		items[size] = item;
-//		size++;
-//		System.out.println("capacity: " + items.length);
-//		return true;
-//	}
-
-
 	@Override
 		public boolean add(int index, T item) throws IndexOutOfBoundsException{
 		//Assigment5: double array size
@@ -30,17 +16,9 @@ public class CustomArrayList<T> implements CustomList<T> {
 			}
 			items[index] = item;
 			size ++;
-
 			//System.out.println("capacity: " + items.length);
 			return true;
     }
-
-	private void throwIndexException(int index) {
-		if(index > size || index < 0){
-			throw new IndexOutOfBoundsException();
-		}
-	}
-
 
 	@Override
 	public boolean add(T item) {
@@ -53,13 +31,12 @@ public class CustomArrayList<T> implements CustomList<T> {
 		return size;
 	}
 
-	
 	@SuppressWarnings("unchecked")
 	@Override
 	public T get(int index) {
 			return (T) items[index];
 	}
-
+	@SuppressWarnings("unchecked") // warning for unchecked cast. situation from stackoverflow :)
 	@Override
 	public T remove(int index) throws IndexOutOfBoundsException {
 		throwIndexException(index);
@@ -73,5 +50,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 
 		return item;
 	}
-
+	private void throwIndexException(int index) {
+		if(index > size || index < 0) throw new IndexOutOfBoundsException();
+	}
 }
